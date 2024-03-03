@@ -1,0 +1,471 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.navbar-container {
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+
+.navbar-container:hover {
+  box-shadow: 0 4px 10px 0 #027fb438;
+}
+
+.navbar-container nav {
+  display: flex;
+  height: 65px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+.navbar-container nav .logo img {
+  height: 55px;
+}
+.navbar-container nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.navbar-container nav ul li {
+  margin: 0 5px;
+}
+
+.navbar-container nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 15px;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-container nav ul li a.active,
+.navbar-container nav ul li a:hover {
+  background: linear-gradient(to right, #4cddf8 0%, #027eb4 100%);
+  color: white;
+}
+
+.navbar-container nav .menu-btn i {
+  color: #027eb4;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  align-items: center;
+}
+
+.subheader {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  width: max-content;
+  margin: 4px auto;
+  margin-bottom: 3rem;
+}
+
+.subheader::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, #4cddf8 0%, #027eb4 100%);
+}
+
+.sub- {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Beranda */
+main .beranda {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 4rem;
+}
+
+main .beranda .content-description {
+  flex: 1 1;
+}
+
+main .beranda .content-description .tittle {
+  margin-block: 2rem;
+  font-size: 3.5rem;
+}
+
+main .beranda .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+main .beranda .content-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+main .beranda .content-image img {
+  width: 350px;
+  min-width: 250px;
+  margin-bottom: auto;
+}
+
+/* KEUNGGULAN */
+main .bag-sub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 4rem;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.cntnt-keunggulan {
+  display: flex;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  transition: all 0.2s ease-in-out;
+}
+
+.cntnt-keunggulan:hover,
+.produk:hover {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 4px 8px 0px, rgba(14, 30, 37, 0.32) 0px 4px 32px 0px;
+}
+
+.keterangan {
+  flex: 5;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.gambar {
+  margin: 1rem 1rem 0 1rem;
+  flex: 1;
+}
+
+.gambar i {
+  color: #02b0e2;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+}
+
+/* Katalog */
+.produk {
+  width: 325px;
+  height: 400px;
+  background-color: #2b8ace;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.img-produk {
+  width: 100%;
+  height: 56.25%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img-produk img {
+  width: 100%;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+
+.img-produk img:hover {
+  transform: scale(1.1);
+}
+
+.nama-produk {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.desc-produk {
+  font-size: medium;
+  margin: 0rem 1rem 0 1rem;
+  height: 95px;
+  color: white;
+}
+
+.selengkapnya {
+  margin-left: 1rem;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+.selengkapnya::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+  top: 110%;
+  transition: all 0.4s;
+}
+
+.selengkapnya:hover::after {
+  width: 100%;
+}
+
+/* Contact */
+.wrap {
+  background: #ffffff;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: #027fb452 0px 2px 4px 0px, #027fb45f 0px 2px 16px 0px;
+}
+
+form,
+input,
+textarea,
+button {
+  font-size: initial;
+}
+
+.group input,
+.group textarea {
+  width: 100%;
+  padding: 1rem 0.8rem;
+  border: 1px solid #027eb4;
+  outline: 0;
+  transition: border 0.15s;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.group input {
+  height: 2rem;
+}
+
+.group textarea {
+  resize: vertical;
+  font-family: "Quicksand", sans-serif;
+}
+
+.group input:focus,
+.group textarea:focus {
+  border: 1px solid #02b41a;
+}
+
+.kirim {
+  font-family: "Quicksand", sans-serif;
+  background: #ffffff;
+  color: #027eb4;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid #027eb4;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.kirim:hover {
+  background: rgb(254, 254, 254);
+  color: #02b41a;
+  border: 2px solid #02b41a;
+}
+
+/* Profil */
+.container-profil {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sub-profil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  border-radius: 20px;
+  box-shadow: #027fb452 0px 2px 4px 0px, #027fb45f 0px 2px 16px 0px;
+}
+
+.sub-profil .foto-profil {
+  margin: 1rem;
+  width: 200px;
+}
+
+.sub-profil .foto-profil img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.desc-profil {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+
+th {
+  padding: 1rem;
+}
+
+th i {
+  color: black;
+}
+
+/* FOOTER */
+footer {
+  padding: 10px;
+  color: white;
+  background-color: #027fb4;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer p i {
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1000px) {
+  .navbar-container nav {
+    padding: 0 0 0 50px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .navbar-container nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  .navbar-container nav ul {
+    position: fixed;
+    top: 48px;
+    left: -100%;
+    background: #ffffffdc;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  .navbar-container nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .navbar-container nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border: 2px solid transparent;
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  .navbar-container nav ul li a.active,
+  .navbar-container nav ul li a:hover {
+    background: none;
+    color: rgb(0, 0, 0);
+    border: 2px solid #027eb4;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* MAIN */
+  main {
+    padding: 1rem 3rem;
+  }
+  /* BERANDA */
+  main .beranda {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .beranda .content-image {
+    order: -1;
+    width: 200px;
+  }
+
+  main .beranda .content-description .tittle {
+    font-size: 3rem;
+  }
+
+  main .beranda .content-description p {
+    font-size: 1rem;
+  }
+
+  /* KEUNGGULAN */
+  .cntnt-keunggulan {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cntnt-keunggulan .keterangan {
+    flex: 1;
+  }
+  .cntnt-keunggulan .gambar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    order: -1;
+  }
+
+  /* CONTACT */
+  .wrap {
+    width: 100%;
+  }
+
+  /* PROFIL */
+  .sub-profil {
+    width: 100%;
+  }
+}
